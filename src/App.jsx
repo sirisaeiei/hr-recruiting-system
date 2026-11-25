@@ -349,24 +349,24 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#eef2f6] font-sans text-slate-800">
+    <div className="min-h-screen flex bg-[#FAFAFA] font-sans text-slate-800">
       {/* Toast Notification */}
       {toast && (
-        <div className={`fixed top-5 right-5 z-50 flex items-center gap-2.5 px-5 py-3.5 rounded-xl shadow-xl text-white font-medium transition-all ${toast.type === 'error' ? 'bg-red-600' : 'bg-emerald-600'}`}>
+        <div className={`fixed top-5 right-5 z-50 flex items-center gap-2.5 px-5 py-3.5 rounded-xl shadow-xl text-white font-medium transition-all ${toast.type === 'error' ? 'bg-[#DC2626]' : 'bg-[#16A34A]'}`}>
           <CheckCircle2 className="w-5 h-5" />
           <span>{toast.msg}</span>
         </div>
       )}
 
       {/* ================= SIDEBAR (แนวทางตามภาพที่ 2: โทนน้ำเงินเข้ม + โลโก้ Speedy ด้านบน) ================= */}
-      <aside className="w-64 bg-gradient-to-b from-[#0b438c] via-[#0d4ea1] to-[#083570] text-white flex flex-col justify-between shrink-0 relative overflow-hidden shadow-xl print:hidden">
+      <aside className="w-64 bg-gradient-to-b from-[#075E2C] to-[#00A86B] text-white flex flex-col justify-between shrink-0 relative overflow-hidden shadow-xl print:hidden">
         <div>
           {/* Logo Brand Header (พื้นหลังสีขาวด้านบนซ้ายตามภาพที่ 2) */}
           <div className="bg-white px-5 py-4 border-b border-slate-200 flex flex-col items-center justify-center shadow-sm">
             <div className="flex items-baseline gap-0.5 tracking-tight">
-              <span className="text-3xl font-black italic text-[#f37021] drop-shadow-sm">SPEEDY</span>
+              <span className="text-3xl font-black italic text-[#F0522D] drop-shadow-sm">SPEEDY</span>
             </div>
-            <span className="text-[10px] font-extrabold tracking-widest text-[#16a34a] uppercase mt-0.5">
+            <span className="text-[10px] font-extrabold tracking-widest text-[#008F18] uppercase mt-0.5">
               PACKAGE EXPRESS
             </span>
           </div>
@@ -390,8 +390,8 @@ export default function App() {
                   onClick={() => setActiveMenu(item.id)}
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     isActive
-                      ? 'bg-[#2b7de9] text-white shadow-md border-l-4 border-[#f37021]'
-                      : 'text-blue-100 hover:bg-white/10 hover:text-white'
+                      ? 'bg-[#008F18] text-white shadow-md border-l-4 border-[#FF6600]'
+                      : 'text-green-100 hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -422,7 +422,7 @@ export default function App() {
           <div className="p-3 border-t border-white/10">
             <button
               onClick={() => showToast('ออกจากระบบเรียบร้อยแล้ว')}
-              className="w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-blue-200 hover:text-white hover:bg-white/10 transition"
+              className="w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-green-200 hover:text-white hover:bg-white/10 transition"
             >
               <LogOut className="w-5 h-5" />
               <span>ออกจากระบบ</span>
@@ -434,14 +434,14 @@ export default function App() {
       {/* ================= MAIN CONTENT AREA ================= */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Header Bar (ตามภาพที่ 2: ชื่อโปรแกรม + ชื่อบริษัท + วันที่/เวลา + ผู้ดูแลระบบ) */}
-        <header className="h-[73px] bg-gradient-to-r from-[#eef5fc] via-[#f5f9ff] to-[#e6f0fa] border-b border-slate-200 px-6 flex items-center justify-between shrink-0 shadow-xs print:hidden">
+        <header className="h-[73px] bg-gradient-to-r from-[#EAF5EC] via-white to-[#FAFAFA] border-b border-slate-200 px-6 flex items-center justify-between shrink-0 shadow-xs print:hidden">
           <div className="flex items-center gap-4">
-            <div className="h-10 w-1 bg-[#1e40af] rounded-full hidden sm:block"></div>
+            <div className="h-10 w-1 bg-[#008F18] rounded-full hidden sm:block"></div>
             <div>
-              <h1 className="text-lg md:text-xl font-bold text-[#0f3878] leading-tight">
+              <h1 className="text-lg md:text-xl font-bold text-[#08652D] leading-tight">
                 โปรแกรมบริหารงานทรัพยากรบุคคล (HR Management System)
               </h1>
-              <p className="text-xs md:text-sm font-medium text-[#1d5bb8]">
+              <p className="text-xs md:text-sm font-medium text-[#008F18]">
                 บริษัท สปีดี้แพคเก็จ เอ็กซ์เพรส จำกัด
               </p>
             </div>
@@ -449,14 +449,14 @@ export default function App() {
 
           <div className="flex items-center gap-4">
             {/* วันที่และเวลาปัจจุบัน */}
-            <div className="hidden xl:flex items-center gap-2 bg-white/80 border border-blue-200/80 px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#0f3878] shadow-2xs">
-              <Calendar className="w-4 h-4 text-[#1d5bb8]" />
+            <div className="hidden xl:flex items-center gap-2 bg-white/80 border border-green-200/80 px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#08652D] shadow-2xs">
+              <Calendar className="w-4 h-4 text-[#008F18]" />
               <span>วันพุธที่ 25 พฤศจิกายน 2569 เวลา 08:25 น.</span>
             </div>
 
             {/* โปรไฟล์ผู้ดูแลระบบ */}
             <div className="flex items-center gap-2.5 bg-white border border-slate-200 px-3 py-1.5 rounded-full shadow-2xs cursor-pointer hover:bg-slate-50">
-              <div className="w-7 h-7 rounded-full bg-[#0f3878] text-white flex items-center justify-center text-xs font-bold">
+              <div className="w-7 h-7 rounded-full bg-[#08652D] text-white flex items-center justify-center text-xs font-bold">
                 <Users className="w-4 h-4" />
               </div>
               <span className="text-sm font-semibold text-slate-700">ผู้ดูแลระบบ</span>
@@ -474,11 +474,11 @@ export default function App() {
               <div className="xl:col-span-9 space-y-5">
                 {/* หัวข้อต้อนรับด้านบน */}
                 <div className="bg-white rounded-xl p-4 border border-slate-200/80 shadow-2xs flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#0f4c9c] flex items-center justify-center shrink-0 border border-blue-100">
+                  <div className="w-12 h-12 rounded-xl bg-green-50 text-[#008F18] flex items-center justify-center shrink-0 border border-green-100">
                     <Users className="w-7 h-7" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-[#0f3878]">ระบบบริหารงานบุคคล (HR)</h2>
+                    <h2 className="text-xl font-bold text-[#08652D]">ระบบบริหารงานบุคคล (HR)</h2>
                     <p className="text-sm text-slate-600">
                       ยินดีต้อนรับสู่ระบบบริหารงานทรัพยากรบุคคล บริษัท สปีดี้แพคเก็จ เอ็กซ์เพรส จำกัด
                     </p>
@@ -488,8 +488,8 @@ export default function App() {
                 {/* แถวการ์ดสรุปตัวเลข 5 ใบ (ตามภาพที่ 2) */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
                   {/* 1. พนักงานทั้งหมด */}
-                  <div className="bg-[#e8f2fe] border border-blue-200/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs">
-                    <div className="w-11 h-11 rounded-full bg-[#1976d2] text-white flex items-center justify-center shrink-0">
+                  <div className="bg-[#EAF5EC] border border-green-200/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-[#00B32D] text-white flex items-center justify-center shrink-0">
                       <Users className="w-5 h-5" />
                     </div>
                     <div>
@@ -501,8 +501,8 @@ export default function App() {
                   </div>
 
                   {/* 2. พนักงานใหม่ (เดือนนี้) */}
-                  <div className="bg-[#e7f7ed] border border-emerald-200/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs">
-                    <div className="w-11 h-11 rounded-full bg-[#2e9e5b] text-white flex items-center justify-center shrink-0">
+                  <div className="bg-[#E8F5E9] border border-[#C8E6C9]/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-[#16A34A] text-white flex items-center justify-center shrink-0">
                       <UserPlus className="w-5 h-5" />
                     </div>
                     <div>
@@ -514,8 +514,8 @@ export default function App() {
                   </div>
 
                   {/* 3. พ้นสภาพ (เดือนนี้) */}
-                  <div className="bg-[#fdf0e6] border border-orange-200/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs">
-                    <div className="w-11 h-11 rounded-full bg-[#f37021] text-white flex items-center justify-center shrink-0">
+                  <div className="bg-[#FFF0E4] border border-[#FFD7BD]/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-[#FF6600] text-white flex items-center justify-center shrink-0">
                       <LogOut className="w-5 h-5" />
                     </div>
                     <div>
@@ -527,8 +527,8 @@ export default function App() {
                   </div>
 
                   {/* 4. วันลาพักรออนุมัติ */}
-                  <div className="bg-[#efeffb] border border-indigo-200/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs">
-                    <div className="w-11 h-11 rounded-full bg-[#4f46e5] text-white flex items-center justify-center shrink-0">
+                  <div className="bg-[#F3E8FF] border border-[#E9D5FF]/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-[#9333EA] text-white flex items-center justify-center shrink-0">
                       <CalendarClock className="w-5 h-5" />
                     </div>
                     <div>
@@ -540,8 +540,8 @@ export default function App() {
                   </div>
 
                   {/* 5. วันเกิดเดือนนี้ */}
-                  <div className="bg-[#fcebf1] border border-pink-200/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs col-span-2 sm:col-span-1">
-                    <div className="w-11 h-11 rounded-full bg-[#db2777] text-white flex items-center justify-center shrink-0">
+                  <div className="bg-[#FDF2F8] border border-pink-200/80 rounded-xl p-3.5 flex items-center gap-3 shadow-2xs col-span-2 sm:col-span-1">
+                    <div className="w-11 h-11 rounded-full bg-[#EC4899] text-white flex items-center justify-center shrink-0">
                       <Cake className="w-5 h-5" />
                     </div>
                     <div>
@@ -557,33 +557,33 @@ export default function App() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {/* คอลัมน์ 1: ฐานข้อมูล (Master Data) */}
                   <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden flex flex-col">
-                    <div className="bg-gradient-to-r from-[#0e4d9c] to-[#1a67c7] text-white px-4 py-3 flex items-center gap-3">
+                    <div className="bg-gradient-to-r from-[#00A51D] to-[#00751B] text-white px-4 py-3 flex items-center gap-3">
                       <Building2 className="w-6 h-6 shrink-0 opacity-90" />
                       <div>
                         <h3 className="font-bold text-sm leading-tight">ฐานข้อมูล</h3>
-                        <p className="text-[11px] text-blue-100">(Master Data)</p>
+                        <p className="text-[11px] text-green-100">(Master Data)</p>
                       </div>
                     </div>
                     <div className="p-3 space-y-2.5 flex-1 bg-slate-50/50">
                       <button
                         onClick={() => navigateTo('master', 'company')}
-                        className="w-full flex items-center gap-3 bg-white hover:bg-blue-50 text-slate-700 hover:text-[#0e4d9c] border border-slate-200 hover:border-blue-300 px-3.5 py-2.5 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
+                        className="w-full flex items-center gap-3 bg-white hover:bg-green-50 text-slate-700 hover:text-[#008F18] border border-slate-200 hover:border-green-300 px-3.5 py-2.5 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
                       >
-                        <Building2 className="w-4 h-4 text-[#1976d2] shrink-0" />
+                        <Building2 className="w-4 h-4 text-[#00B32D] shrink-0" />
                         <span>บริษัท/องค์กร</span>
                       </button>
                       <button
                         onClick={() => navigateTo('master', 'affiliate')}
-                        className="w-full flex items-center gap-3 bg-white hover:bg-blue-50 text-slate-700 hover:text-[#0e4d9c] border border-slate-200 hover:border-blue-300 px-3.5 py-2.5 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
+                        className="w-full flex items-center gap-3 bg-white hover:bg-green-50 text-slate-700 hover:text-[#008F18] border border-slate-200 hover:border-green-300 px-3.5 py-2.5 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
                       >
-                        <Network className="w-4 h-4 text-[#1976d2] shrink-0" />
+                        <Network className="w-4 h-4 text-[#00B32D] shrink-0" />
                         <span>โครงสร้างองค์กร / ลูกค้าในเครือ</span>
                       </button>
                       <button
                         onClick={() => navigateTo('master', 'staff')}
-                        className="w-full flex items-center gap-3 bg-white hover:bg-blue-50 text-slate-700 hover:text-[#0e4d9c] border border-slate-200 hover:border-blue-300 px-3.5 py-2.5 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
+                        className="w-full flex items-center gap-3 bg-white hover:bg-green-50 text-slate-700 hover:text-[#008F18] border border-slate-200 hover:border-green-300 px-3.5 py-2.5 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
                       >
-                        <Users className="w-4 h-4 text-[#1976d2] shrink-0" />
+                        <Users className="w-4 h-4 text-[#00B32D] shrink-0" />
                         <span>พนักงาน</span>
                       </button>
                     </div>
@@ -591,11 +591,11 @@ export default function App() {
 
                   {/* คอลัมน์ 2: บันทึกข้อมูล (HR Transactions) */}
                   <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden flex flex-col">
-                    <div className="bg-gradient-to-r from-[#0e4d9c] to-[#1a67c7] text-white px-4 py-3 flex items-center gap-3">
+                    <div className="bg-gradient-to-r from-[#00A51D] to-[#00751B] text-white px-4 py-3 flex items-center gap-3">
                       <FileText className="w-6 h-6 shrink-0 opacity-90" />
                       <div>
                         <h3 className="font-bold text-sm leading-tight">บันทึกข้อมูล</h3>
-                        <p className="text-[11px] text-blue-100">(HR Transactions)</p>
+                        <p className="text-[11px] text-green-100">(HR Transactions)</p>
                       </div>
                     </div>
                     <div className="p-3 space-y-2 flex-1 bg-slate-50/50">
@@ -612,9 +612,9 @@ export default function App() {
                           <button
                             key={btn.id}
                             onClick={() => navigateTo('records', btn.id)}
-                            className="w-full flex items-center gap-2.5 bg-white hover:bg-blue-50 text-slate-700 hover:text-[#0e4d9c] border border-slate-200 hover:border-blue-300 px-3 py-2 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
+                            className="w-full flex items-center gap-2.5 bg-white hover:bg-green-50 text-slate-700 hover:text-[#008F18] border border-slate-200 hover:border-green-300 px-3 py-2 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
                           >
-                            <Icon className="w-4 h-4 text-[#1976d2] shrink-0" />
+                            <Icon className="w-4 h-4 text-[#00B32D] shrink-0" />
                             <span className="truncate">{btn.label}</span>
                           </button>
                         );
@@ -624,11 +624,11 @@ export default function App() {
 
                   {/* คอลัมน์ 3: เอกสารงาน HR (Documents) */}
                   <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden flex flex-col">
-                    <div className="bg-gradient-to-r from-[#0e4d9c] to-[#1a67c7] text-white px-4 py-3 flex items-center gap-3">
+                    <div className="bg-gradient-to-r from-[#00A51D] to-[#00751B] text-white px-4 py-3 flex items-center gap-3">
                       <FolderOpen className="w-6 h-6 shrink-0 opacity-90" />
                       <div>
                         <h3 className="font-bold text-sm leading-tight">เอกสารงาน HR</h3>
-                        <p className="text-[11px] text-blue-100">(Documents)</p>
+                        <p className="text-[11px] text-green-100">(Documents)</p>
                       </div>
                     </div>
                     <div className="p-3 space-y-2 flex-1 bg-slate-50/50">
@@ -644,9 +644,9 @@ export default function App() {
                         <button
                           key={doc.id}
                           onClick={() => navigateTo('attachments', doc.id)}
-                          className="w-full flex items-center gap-2.5 bg-white hover:bg-blue-50 text-slate-700 hover:text-[#0e4d9c] border border-slate-200 hover:border-blue-300 px-3 py-2 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
+                          className="w-full flex items-center gap-2.5 bg-white hover:bg-green-50 text-slate-700 hover:text-[#008F18] border border-slate-200 hover:border-green-300 px-3 py-2 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
                         >
-                          <FileText className="w-4 h-4 text-[#1976d2] shrink-0" />
+                          <FileText className="w-4 h-4 text-[#00B32D] shrink-0" />
                           <span className="truncate">{doc.label}</span>
                         </button>
                       ))}
@@ -655,11 +655,11 @@ export default function App() {
 
                   {/* คอลัมน์ 4: รายงาน (Reports) */}
                   <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden flex flex-col">
-                    <div className="bg-gradient-to-r from-[#0e4d9c] to-[#1a67c7] text-white px-4 py-3 flex items-center gap-3">
+                    <div className="bg-gradient-to-r from-[#00A51D] to-[#00751B] text-white px-4 py-3 flex items-center gap-3">
                       <BarChart3 className="w-6 h-6 shrink-0 opacity-90" />
                       <div>
                         <h3 className="font-bold text-sm leading-tight">รายงาน</h3>
-                        <p className="text-[11px] text-blue-100">(Reports)</p>
+                        <p className="text-[11px] text-green-100">(Reports)</p>
                       </div>
                     </div>
                     <div className="p-3 space-y-2.5 flex-1 bg-slate-50/50">
@@ -673,9 +673,9 @@ export default function App() {
                         <button
                           key={idx}
                           onClick={() => navigateTo('reports')}
-                          className="w-full flex items-center gap-2.5 bg-white hover:bg-blue-50 text-slate-700 hover:text-[#0e4d9c] border border-slate-200 hover:border-blue-300 px-3 py-2.5 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
+                          className="w-full flex items-center gap-2.5 bg-white hover:bg-green-50 text-slate-700 hover:text-[#008F18] border border-slate-200 hover:border-green-300 px-3 py-2.5 rounded-lg text-xs font-semibold shadow-2xs transition text-left"
                         >
-                          <BarChart3 className="w-4 h-4 text-[#1976d2] shrink-0" />
+                          <BarChart3 className="w-4 h-4 text-[#00B32D] shrink-0" />
                           <span className="truncate">{rep}</span>
                         </button>
                       ))}
@@ -689,8 +689,8 @@ export default function App() {
                 {/* กล่องบน: งานที่ต้องดำเนินการ */}
                 <div className="bg-white rounded-xl border border-slate-200 shadow-2xs p-4">
                   <div className="flex items-center gap-2 pb-3 mb-3 border-b border-slate-100">
-                    <Bell className="w-5 h-5 text-[#0f4c9c]" />
-                    <h3 className="font-bold text-sm text-[#0f3878]">งานที่ต้องดำเนินการ</h3>
+                    <Bell className="w-5 h-5 text-[#008F18]" />
+                    <h3 className="font-bold text-sm text-[#08652D]">งานที่ต้องดำเนินการ</h3>
                   </div>
                   <div className="space-y-2.5">
                     {[
@@ -707,11 +707,11 @@ export default function App() {
                       >
                         <div className="flex items-center gap-2 min-w-0">
                           <span className="text-slate-400 text-xs">▷</span>
-                          <span className="text-xs font-medium text-slate-700 group-hover:text-[#0e4d9c] truncate">
+                          <span className="text-xs font-medium text-slate-700 group-hover:text-[#008F18] truncate">
                             {task.label}
                           </span>
                         </div>
-                        <span className="bg-[#ef4444] text-white text-[11px] font-bold px-2 py-0.5 rounded-md shrink-0">
+                        <span className="bg-[#DC2626] text-white text-[11px] font-bold px-2 py-0.5 rounded-md shrink-0">
                           {task.count}
                         </span>
                       </button>
@@ -722,37 +722,37 @@ export default function App() {
                 {/* กล่องล่าง: ทางลัด (Quick Access) */}
                 <div className="bg-white rounded-xl border border-slate-200 shadow-2xs p-4">
                   <div className="flex items-center gap-2 pb-3 mb-3 border-b border-slate-100">
-                    <Sparkles className="w-5 h-5 text-[#0f4c9c]" />
-                    <h3 className="font-bold text-sm text-[#0f3878]">ทางลัด (Quick Access)</h3>
+                    <Sparkles className="w-5 h-5 text-[#008F18]" />
+                    <h3 className="font-bold text-sm text-[#08652D]">ทางลัด (Quick Access)</h3>
                   </div>
 
                   <div className="space-y-3">
                     {/* ปุ่มใหญ่ด้านบน: เพิ่มพนักงานใหม่ */}
                     <button
                       onClick={() => navigateTo('master', 'staff')}
-                      className="w-full bg-[#f4f8fd] hover:bg-blue-50 border border-blue-200 rounded-xl p-3.5 flex flex-col items-center justify-center gap-1.5 transition shadow-2xs group"
+                      className="w-full bg-[#EAF5EC] hover:bg-green-50 border border-green-200 rounded-xl p-3.5 flex flex-col items-center justify-center gap-1.5 transition shadow-2xs group"
                     >
-                      <div className="w-9 h-9 rounded-full bg-white text-[#1976d2] flex items-center justify-center shadow-2xs group-hover:scale-105 transition">
+                      <div className="w-9 h-9 rounded-full bg-white text-[#00B32D] flex items-center justify-center shadow-2xs group-hover:scale-105 transition">
                         <UserPlus className="w-5 h-5" />
                       </div>
-                      <span className="text-xs font-bold text-[#0f3878]">เพิ่มพนักงานใหม่</span>
+                      <span className="text-xs font-bold text-[#08652D]">เพิ่มพนักงานใหม่</span>
                     </button>
 
                     {/* ปุ่มคู่ด้านล่าง: สร้างใบสมัครงาน + ค้นหาพนักงาน */}
                     <div className="grid grid-cols-2 gap-2.5">
                       <button
                         onClick={() => navigateTo('records', 'application')}
-                        className="bg-[#f4f8fd] hover:bg-blue-50 border border-blue-200 rounded-xl p-3 flex flex-col items-center justify-center gap-1.5 transition shadow-2xs text-center"
+                        className="bg-[#EAF5EC] hover:bg-green-50 border border-green-200 rounded-xl p-3 flex flex-col items-center justify-center gap-1.5 transition shadow-2xs text-center"
                       >
-                        <FilePlus className="w-5 h-5 text-[#1976d2]" />
-                        <span className="text-[11px] font-bold text-[#0f3878] leading-tight">สร้างใบสมัครงาน</span>
+                        <FilePlus className="w-5 h-5 text-[#00B32D]" />
+                        <span className="text-[11px] font-bold text-[#08652D] leading-tight">สร้างใบสมัครงาน</span>
                       </button>
                       <button
                         onClick={() => navigateTo('status')}
-                        className="bg-[#f4f8fd] hover:bg-blue-50 border border-blue-200 rounded-xl p-3 flex flex-col items-center justify-center gap-1.5 transition shadow-2xs text-center"
+                        className="bg-[#EAF5EC] hover:bg-green-50 border border-green-200 rounded-xl p-3 flex flex-col items-center justify-center gap-1.5 transition shadow-2xs text-center"
                       >
-                        <Search className="w-5 h-5 text-[#1976d2]" />
-                        <span className="text-[11px] font-bold text-[#0f3878] leading-tight">ค้นหาพนักงาน</span>
+                        <Search className="w-5 h-5 text-[#00B32D]" />
+                        <span className="text-[11px] font-bold text-[#08652D] leading-tight">ค้นหาพนักงาน</span>
                       </button>
                     </div>
                   </div>
@@ -767,7 +767,7 @@ export default function App() {
               {/* Top Sub-tabs */}
               <div className="flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-blue-50 text-[#0e4d9c] rounded-xl">
+                  <div className="p-2.5 bg-green-50 text-[#008F18] rounded-xl">
                     <Building2 className="w-6 h-6" />
                   </div>
                   <div>
@@ -786,7 +786,7 @@ export default function App() {
                       onClick={() => setMasterTab(tab.id)}
                       className={`px-4 py-2 rounded-xl text-sm font-semibold transition ${
                         masterTab === tab.id
-                          ? 'bg-[#0e4d9c] text-white shadow-sm'
+                          ? 'bg-[#008F18] text-white shadow-sm'
                           : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                       }`}
                     >
@@ -800,7 +800,7 @@ export default function App() {
               {masterTab === 'company' && (
                 <form onSubmit={handleSaveCompany} className="space-y-5">
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
-                    <div className="bg-[#0e4d9c] text-white px-5 py-3 flex items-center justify-between">
+                    <div className="bg-[#008F18] text-white px-5 py-3 flex items-center justify-between">
                       <div className="flex items-center gap-2 font-semibold text-sm">
                         <Building2 className="w-4 h-4" />
                         <span>ข้อมูลบริษัทหลัก</span>
@@ -879,7 +879,7 @@ export default function App() {
                   </div>
 
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
-                    <div className="bg-[#0e4d9c] text-white px-5 py-3 flex items-center gap-2 font-semibold text-sm">
+                    <div className="bg-[#008F18] text-white px-5 py-3 flex items-center gap-2 font-semibold text-sm">
                       <PhoneCall className="w-4 h-4" />
                       <span>ที่อยู่และการติดต่อ</span>
                     </div>
@@ -933,7 +933,7 @@ export default function App() {
                   </div>
 
                   <div className="flex justify-center gap-3">
-                    <button type="submit" className="flex items-center gap-2 px-6 py-2.5 bg-[#0e4d9c] hover:bg-blue-800 text-white rounded-xl text-sm font-semibold shadow-sm">
+                    <button type="submit" className="flex items-center gap-2 px-6 py-2.5 bg-[#008F18] hover:bg-green-800 text-white rounded-xl text-sm font-semibold shadow-sm">
                       <Save className="w-4 h-4" /> บันทึก
                     </button>
                     <button
@@ -951,7 +951,7 @@ export default function App() {
               {masterTab === 'affiliate' && (
                 <form onSubmit={handleSaveAffiliate} className="space-y-5">
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
-                    <div className="bg-[#0e4d9c] text-white px-5 py-3 flex items-center gap-2 font-semibold text-sm">
+                    <div className="bg-[#008F18] text-white px-5 py-3 flex items-center gap-2 font-semibold text-sm">
                       <Building2 className="w-4 h-4" />
                       <span>รายละเอียดหน่วยงานลูกค้าในเครือ</span>
                     </div>
@@ -1097,7 +1097,7 @@ export default function App() {
 
                   {/* รายชื่อผู้ติดต่อ */}
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
-                    <div className="bg-[#0e4d9c] text-white px-5 py-3 flex items-center justify-between">
+                    <div className="bg-[#008F18] text-white px-5 py-3 flex items-center justify-between">
                       <span className="font-semibold text-sm">รายชื่อผู้ติดต่อ</span>
                     </div>
                     <div className="p-5 space-y-4">
@@ -1133,7 +1133,7 @@ export default function App() {
                         <button
                           type="button"
                           onClick={handleAddAffiliateContact}
-                          className="bg-[#f37021] hover:bg-orange-600 text-white rounded-lg text-xs font-semibold py-2 px-3 flex items-center justify-center gap-1"
+                          className="bg-gradient-to-r from-[#FF8500] to-[#FF5500] hover:brightness-95 text-white rounded-lg text-xs font-semibold py-2 px-3 flex items-center justify-center gap-1"
                         >
                           <Plus className="w-4 h-4" /> เพิ่มผู้ติดต่อ
                         </button>
@@ -1166,7 +1166,7 @@ export default function App() {
                                         contacts: prev.contacts.filter((x) => x.id !== ct.id)
                                       }))
                                     }
-                                    className="text-red-500 hover:text-red-700"
+                                    className="text-[#DC2626] hover:text-[#DC2626]"
                                   >
                                     <Trash2 className="w-4 h-4 inline" />
                                   </button>
@@ -1180,7 +1180,7 @@ export default function App() {
                   </div>
 
                   <div className="flex justify-center gap-3">
-                    <button type="submit" className="flex items-center gap-2 px-6 py-2.5 bg-[#0e4d9c] hover:bg-blue-800 text-white rounded-xl text-sm font-semibold">
+                    <button type="submit" className="flex items-center gap-2 px-6 py-2.5 bg-[#008F18] hover:bg-green-800 text-white rounded-xl text-sm font-semibold">
                       <Save className="w-4 h-4" /> บันทึกข้อมูลลูกค้าในเครือ
                     </button>
                   </div>
@@ -1191,7 +1191,7 @@ export default function App() {
               {masterTab === 'staff' && (
                 <form onSubmit={handleSaveStaff} className="space-y-5">
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
-                    <div className="bg-[#0e4d9c] text-white px-5 py-3 flex items-center justify-between">
+                    <div className="bg-[#008F18] text-white px-5 py-3 flex items-center justify-between">
                       <span className="font-semibold text-sm">ข้อมูลส่วนตัวพนักงาน</span>
                       <select
                         value={staffForm.code}
@@ -1218,7 +1218,7 @@ export default function App() {
                             <Users className="w-10 h-10" />
                           </div>
                         )}
-                        <label className="cursor-pointer bg-[#0e4d9c] text-white text-xs px-3 py-1.5 rounded-lg hover:bg-blue-800 flex items-center gap-1">
+                        <label className="cursor-pointer bg-[#008F18] text-white text-xs px-3 py-1.5 rounded-lg hover:bg-green-800 flex items-center gap-1">
                           <Upload className="w-3.5 h-3.5" /> อัปโหลดรูปภาพ
                           <input type="file" accept="image/*" onChange={handlePhotoUpload} className="hidden" />
                         </label>
@@ -1274,7 +1274,7 @@ export default function App() {
                   {/* ข้อมูลการทำงาน + ธนาคาร + ฉุกเฉิน */}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                     <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
-                      <div className="bg-[#0e4d9c] text-white px-5 py-3 font-semibold text-sm">ข้อมูลการทำงาน</div>
+                      <div className="bg-[#008F18] text-white px-5 py-3 font-semibold text-sm">ข้อมูลการทำงาน</div>
                       <div className="p-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                         <div>
                           <label className="block text-xs font-semibold text-slate-600 mb-1">หมายเลขบัตรประชาชน *</label>
@@ -1330,7 +1330,7 @@ export default function App() {
 
                     <div className="space-y-5">
                       <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
-                        <div className="bg-[#0e4d9c] text-white px-5 py-3 font-semibold text-sm">ข้อมูลธนาคาร</div>
+                        <div className="bg-[#008F18] text-white px-5 py-3 font-semibold text-sm">ข้อมูลธนาคาร</div>
                         <div className="p-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                           <div className="sm:col-span-2">
                             <label className="block text-xs font-semibold text-slate-600 mb-1">บัญชีธนาคาร (ตาม PDF)</label>
@@ -1369,7 +1369,7 @@ export default function App() {
                       </div>
 
                       <div className="bg-white rounded-2xl border border-slate-200 shadow-2xs overflow-hidden">
-                        <div className="bg-[#0e4d9c] text-white px-5 py-3 font-semibold text-sm">ผู้ติดต่อฉุกเฉิน</div>
+                        <div className="bg-[#008F18] text-white px-5 py-3 font-semibold text-sm">ผู้ติดต่อฉุกเฉิน</div>
                         <div className="p-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                           <div>
                             <label className="block text-xs font-semibold text-slate-600 mb-1">กรณีฉุกเฉินติดต่อ *</label>
@@ -1395,7 +1395,7 @@ export default function App() {
                   </div>
 
                   <div className="flex justify-center gap-3">
-                    <button type="submit" className="flex items-center gap-2 px-6 py-2.5 bg-[#0e4d9c] hover:bg-blue-800 text-white rounded-xl text-sm font-semibold">
+                    <button type="submit" className="flex items-center gap-2 px-6 py-2.5 bg-[#008F18] hover:bg-green-800 text-white rounded-xl text-sm font-semibold">
                       <Save className="w-4 h-4" /> บันทึกข้อมูลพนักงาน
                     </button>
                   </div>
@@ -1411,7 +1411,7 @@ export default function App() {
               <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs space-y-3">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 bg-orange-50 text-[#f37021] rounded-xl">
+                    <div className="p-2.5 bg-[#FFF0E4] text-[#FF6600] rounded-xl">
                       <FileText className="w-6 h-6" />
                     </div>
                     <div>
@@ -1421,12 +1421,12 @@ export default function App() {
                   </div>
 
                   {recordSubTab !== 'application' && (
-                    <div className="flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-2 rounded-xl">
-                      <span className="text-xs font-bold text-[#0e4d9c]">ผู้สมัครที่เลือก:</span>
+                    <div className="flex items-center gap-2 bg-green-50 border border-green-200 px-3.5 py-2 rounded-xl">
+                      <span className="text-xs font-bold text-[#008F18]">ผู้สมัครที่เลือก:</span>
                       <select
                         value={selectedAppId}
                         onChange={(e) => setSelectedAppId(e.target.value)}
-                        className="text-xs font-semibold bg-white border border-blue-200 rounded-lg px-2.5 py-1 text-slate-800"
+                        className="text-xs font-semibold bg-white border border-green-200 rounded-lg px-2.5 py-1 text-slate-800"
                       >
                         {applicants.map((a) => (
                           <option key={a.appId} value={a.appId}>
@@ -1454,7 +1454,7 @@ export default function App() {
                       onClick={() => setRecordSubTab(tab.id)}
                       className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition ${
                         recordSubTab === tab.id
-                          ? 'bg-[#f37021] text-white shadow-sm'
+                          ? 'bg-[#FF6600] text-white shadow-sm'
                           : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                       }`}
                     >
@@ -1470,10 +1470,10 @@ export default function App() {
                   <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs space-y-6">
                     <div className="border-b pb-3 flex items-center justify-between">
                       <div>
-                        <h3 className="text-base font-bold text-[#0e4d9c]">ใบสมัครงาน : Application Form</h3>
+                        <h3 className="text-base font-bold text-[#008F18]">ใบสมัครงาน : Application Form</h3>
                         <p className="text-xs text-slate-500">โปรดกรอกข้อความในฟอร์มใบสมัครงานอย่างละเอียดและครบถ้วน</p>
                       </div>
-                      <span className="text-xs font-bold bg-orange-100 text-[#f37021] px-3 py-1 rounded-full">
+                      <span className="text-xs font-bold bg-[#FFF0E4] text-[#FF6600] px-3 py-1 rounded-full">
                         เลขที่ (Auto): APP-2568-00{applicants.length + 1}
                       </span>
                     </div>
@@ -1586,7 +1586,7 @@ export default function App() {
                     {/* ส่วนที่ 2: ครอบครัว & การศึกษา & ทักษะ */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
                       <div className="space-y-3 bg-slate-50 p-4 rounded-xl">
-                        <h4 className="text-xs font-bold text-[#0e4d9c] uppercase">ข้อมูลครอบครัวและสถานภาพ</h4>
+                        <h4 className="text-xs font-bold text-[#008F18] uppercase">ข้อมูลครอบครัวและสถานภาพ</h4>
                         <div className="grid grid-cols-2 gap-3">
                           <div>
                             <label className="block text-xs font-semibold text-slate-600 mb-1">สถานภาพ (ตาม PDF)</label>
@@ -1634,7 +1634,7 @@ export default function App() {
                       </div>
 
                       <div className="space-y-3 bg-slate-50 p-4 rounded-xl">
-                        <h4 className="text-xs font-bold text-[#0e4d9c] uppercase">การศึกษาและความสามารถพิเศษ</h4>
+                        <h4 className="text-xs font-bold text-[#008F18] uppercase">การศึกษาและความสามารถพิเศษ</h4>
                         <div className="grid grid-cols-2 gap-3">
                           <div>
                             <label className="block text-xs font-semibold text-slate-600 mb-1">ระดับการศึกษา (ตาม PDF)</label>
@@ -1706,7 +1706,7 @@ export default function App() {
                       </button>
                       <button
                         type="submit"
-                        className="px-6 py-2.5 bg-[#0e4d9c] hover:bg-blue-800 text-white rounded-xl text-sm font-semibold flex items-center gap-2 shadow-sm"
+                        className="px-6 py-2.5 bg-[#008F18] hover:bg-green-800 text-white rounded-xl text-sm font-semibold flex items-center gap-2 shadow-sm"
                       >
                         <Save className="w-4 h-4" /> บันทึกใบสมัครงาน
                       </button>
@@ -1719,7 +1719,7 @@ export default function App() {
               {recordSubTab === 'docCheck' && (
                 <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs space-y-5">
                   <div className="flex flex-wrap items-center justify-between border-b pb-3 gap-2">
-                    <h3 className="text-base font-bold text-[#0e4d9c]">แบบตรวจสอบเอกสารประกอบการสมัครงาน</h3>
+                    <h3 className="text-base font-bold text-[#008F18]">แบบตรวจสอบเอกสารประกอบการสมัครงาน</h3>
                     <span className="text-xs font-semibold text-slate-500">
                       ผู้สมัคร: <strong className="text-slate-900">{currentApplicant.fullNameTh}</strong> | ตำแหน่ง: {currentApplicant.position}
                     </span>
@@ -1745,7 +1745,7 @@ export default function App() {
                             type="checkbox"
                             checked={!!currentApplicant.docCheck[doc.key]}
                             onChange={(e) => updateCurrentApplicantSection('docCheck', { [doc.key]: e.target.checked })}
-                            className="w-4 h-4 accent-[#0e4d9c]"
+                            className="w-4 h-4 accent-[#008F18]"
                           />
                           <span className="text-sm font-medium text-slate-700">{doc.label}</span>
                         </div>
@@ -1779,7 +1779,7 @@ export default function App() {
                     </div>
                     <button
                       onClick={() => showToast('บันทึกผลการตรวจเอกสารเรียบร้อยแล้ว')}
-                      className="px-6 py-2.5 bg-[#0e4d9c] text-white rounded-xl text-sm font-semibold flex items-center gap-2"
+                      className="px-6 py-2.5 bg-[#008F18] text-white rounded-xl text-sm font-semibold flex items-center gap-2"
                     >
                       <Save className="w-4 h-4" /> บันทึกผลตรวจเอกสาร
                     </button>
@@ -1791,7 +1791,7 @@ export default function App() {
               {recordSubTab === 'interview' && (
                 <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs space-y-5">
                   <div className="border-b pb-3">
-                    <h3 className="text-base font-bold text-[#0e4d9c]">แบบฟอร์มสัมภาษณ์งาน : INTERVIEW Form</h3>
+                    <h3 className="text-base font-bold text-[#008F18]">แบบฟอร์มสัมภาษณ์งาน : INTERVIEW Form</h3>
                     <p className="text-xs text-slate-500">ผู้สมัคร: {currentApplicant.fullNameTh} ({currentApplicant.appId})</p>
                   </div>
 
@@ -1882,7 +1882,7 @@ export default function App() {
                   <div className="flex justify-end">
                     <button
                       onClick={() => showToast('บันทึกข้อมูลการสัมภาษณ์เรียบร้อยแล้ว')}
-                      className="px-6 py-2.5 bg-[#0e4d9c] text-white rounded-xl text-sm font-semibold flex items-center gap-2"
+                      className="px-6 py-2.5 bg-[#008F18] text-white rounded-xl text-sm font-semibold flex items-center gap-2"
                     >
                       <Save className="w-4 h-4" /> บันทึกผลสัมภาษณ์
                     </button>
@@ -1895,7 +1895,7 @@ export default function App() {
                 <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-2xs space-y-6">
                   <div className="flex items-center justify-between border-b pb-4">
                     <div>
-                      <h3 className="text-base font-bold text-[#0e4d9c]">
+                      <h3 className="text-base font-bold text-[#008F18]">
                         {recordSubTab === 'background' && '4. หนังสือมอบอำนาจและยินยอมตรวจประวัติอาชญากรรม'}
                         {recordSubTab === 'referInterview' && '5. หนังสือส่งตัวพนักงานเพื่อเข้าสัมภาษณ์'}
                         {recordSubTab === 'referWork' && '6. หนังสือส่งตัวพนักงานเพื่อเข้าปฏิบัติงาน'}
@@ -1905,7 +1905,7 @@ export default function App() {
                     </div>
                     <button
                       onClick={() => window.print()}
-                      className="px-4 py-2 bg-[#f37021] hover:bg-orange-600 text-white rounded-xl text-xs font-semibold flex items-center gap-2"
+                      className="px-4 py-2 bg-gradient-to-r from-[#FF8500] to-[#FF5500] hover:brightness-95 text-white rounded-xl text-xs font-semibold flex items-center gap-2"
                     >
                       <Printer className="w-4 h-4" /> พิมพ์เอกสารฉบับนี้
                     </button>
@@ -1960,7 +1960,7 @@ export default function App() {
               <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-4 print:hidden">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 bg-blue-50 text-[#0e4d9c] rounded-xl">
+                    <div className="p-2.5 bg-green-50 text-[#008F18] rounded-xl">
                       <FolderOpen className="w-6 h-6" />
                     </div>
                     <div>
@@ -2020,7 +2020,7 @@ export default function App() {
                         onClick={() => setAttachmentDoc(d.id)}
                         className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
                           attachmentDoc === d.id
-                            ? 'bg-[#0e4d9c] text-white'
+                            ? 'bg-[#008F18] text-white'
                             : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                         }`}
                       >
@@ -2043,7 +2043,7 @@ export default function App() {
                     </select>
                     <button
                       onClick={() => window.print()}
-                      className="px-4 py-2 bg-[#f37021] hover:bg-orange-600 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5"
+                      className="px-4 py-2 bg-gradient-to-r from-[#FF8500] to-[#FF5500] hover:brightness-95 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5"
                     >
                       <Printer className="w-4 h-4" /> พิมพ์
                     </button>
@@ -2106,7 +2106,7 @@ export default function App() {
             <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs space-y-5">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
-                  <h2 className="text-lg font-bold text-[#0f3878]">ตรวจสอบสถานะใบสมัครและรายชื่อบุคลากร</h2>
+                  <h2 className="text-lg font-bold text-[#08652D]">ตรวจสอบสถานะใบสมัครและรายชื่อบุคลากร</h2>
                   <p className="text-xs text-slate-500">ค้นหา คัดกรอง และปรับสถานะการพิจารณาใบสมัครงาน</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -2157,7 +2157,7 @@ export default function App() {
                       })
                       .map((app) => (
                         <tr key={app.appId} className="hover:bg-slate-50/80">
-                          <td className="py-3 px-4 font-semibold text-[#0e4d9c] text-xs">{app.appId}</td>
+                          <td className="py-3 px-4 font-semibold text-[#008F18] text-xs">{app.appId}</td>
                           <td className="py-3 px-4 font-medium">{app.fullNameTh}</td>
                           <td className="py-3 px-4 text-slate-600 text-xs">{app.position}</td>
                           <td className="py-3 px-4 text-slate-500 text-xs">{app.applyDate}</td>
@@ -2165,10 +2165,10 @@ export default function App() {
                             <span
                               className={`px-2.5 py-1 rounded-full text-xs font-semibold ${
                                 app.status === 'ผ่านการคัดเลือก'
-                                  ? 'bg-emerald-100 text-emerald-700'
+                                  ? 'bg-[#E8F5E9] text-[#16A34A]'
                                   : app.status === 'สัมภาษณ์แล้ว'
-                                  ? 'bg-orange-100 text-orange-700'
-                                  : 'bg-blue-100 text-blue-700'
+                                  ? 'bg-[#FFF0E4] text-[#F97316]'
+                                  : 'bg-[#E0F2FE] text-[#0284C7]'
                               }`}
                             >
                               {app.status}
@@ -2181,7 +2181,7 @@ export default function App() {
                                 setActiveMenu('records');
                                 setRecordSubTab('interview');
                               }}
-                              className="text-xs bg-blue-50 hover:bg-blue-100 text-[#0e4d9c] font-semibold px-3 py-1.5 rounded-lg"
+                              className="text-xs bg-green-50 hover:bg-green-100 text-[#008F18] font-semibold px-3 py-1.5 rounded-lg"
                             >
                               ดูรายละเอียด / สัมภาษณ์
                             </button>
@@ -2200,32 +2200,32 @@ export default function App() {
               <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs space-y-6">
                 <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-4">
                   <div>
-                    <h2 className="text-lg font-bold text-[#0f3878]">รายงานสรุปข้อมูลทรัพยากรบุคคล (HR Reports)</h2>
+                    <h2 className="text-lg font-bold text-[#08652D]">รายงานสรุปข้อมูลทรัพยากรบุคคล (HR Reports)</h2>
                     <p className="text-xs text-slate-500">สรุปภาพรวมจำนวนพนักงาน การรับสมัคร และสถานะการคัดเลือก</p>
                   </div>
                   <button
                     onClick={() => window.print()}
-                    className="px-4 py-2 bg-[#0e4d9c] text-white rounded-xl text-xs font-semibold flex items-center gap-2"
+                    className="px-4 py-2 bg-[#008F18] text-white rounded-xl text-xs font-semibold flex items-center gap-2"
                   >
                     <Printer className="w-4 h-4" /> พิมพ์รายงาน
                   </button>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-                  <div className="p-4 rounded-xl bg-blue-50 border border-blue-100">
-                    <p className="text-xs font-semibold text-blue-700">จำนวนผู้สมัครทั้งหมด</p>
+                  <div className="p-4 rounded-xl bg-green-50 border border-green-100">
+                    <p className="text-xs font-semibold text-green-700">จำนวนผู้สมัครทั้งหมด</p>
                     <p className="text-2xl font-extrabold text-slate-900 mt-1">128 คน</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-100">
-                    <p className="text-xs font-semibold text-emerald-700">ผ่านการคัดเลือก</p>
+                  <div className="p-4 rounded-xl bg-[#E8F5E9] border border-[#E8F5E9]">
+                    <p className="text-xs font-semibold text-[#16A34A]">ผ่านการคัดเลือก</p>
                     <p className="text-2xl font-extrabold text-slate-900 mt-1">48 คน</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-orange-50 border border-orange-100">
-                    <p className="text-xs font-semibold text-orange-700">อยู่ระหว่างสัมภาษณ์</p>
+                  <div className="p-4 rounded-xl bg-[#FFF0E4] border border-[#FFD7BD]">
+                    <p className="text-xs font-semibold text-[#F97316]">อยู่ระหว่างสัมภาษณ์</p>
                     <p className="text-2xl font-extrabold text-slate-900 mt-1">32 คน</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-purple-50 border border-purple-100">
-                    <p className="text-xs font-semibold text-purple-700">ไม่ผ่านการคัดเลือก</p>
+                  <div className="p-4 rounded-xl bg-[#F3E8FF] border border-[#E9D5FF]">
+                    <p className="text-xs font-semibold text-[#9333EA]">ไม่ผ่านการคัดเลือก</p>
                     <p className="text-2xl font-extrabold text-slate-900 mt-1">48 คน</p>
                   </div>
                 </div>
@@ -2235,10 +2235,10 @@ export default function App() {
                   <h3 className="text-sm font-bold text-slate-800 mb-4">สถิติพนักงานแยกตามฝ่ายงาน</h3>
                   <div className="space-y-3">
                     {[
-                      { dept: 'ฝ่ายปฏิบัติการ', count: 68, pct: '75%', color: 'bg-[#1976d2]' },
-                      { dept: 'ฝ่ายบัญชีและการเงิน', count: 22, pct: '40%', color: 'bg-[#f37021]' },
-                      { dept: 'ฝ่ายบุคคลและธุรการ', count: 18, pct: '32%', color: 'bg-[#2e9e5b]' },
-                      { dept: 'ฝ่ายขายและการตลาด', count: 20, pct: '36%', color: 'bg-[#4f46e5]' }
+                      { dept: 'ฝ่ายปฏิบัติการ', count: 68, pct: '75%', color: 'bg-[#00B32D]' },
+                      { dept: 'ฝ่ายบัญชีและการเงิน', count: 22, pct: '40%', color: 'bg-[#FF6600]' },
+                      { dept: 'ฝ่ายบุคคลและธุรการ', count: 18, pct: '32%', color: 'bg-[#16A34A]' },
+                      { dept: 'ฝ่ายขายและการตลาด', count: 20, pct: '36%', color: 'bg-[#9333EA]' }
                     ].map((row, idx) => (
                       <div key={idx} className="space-y-1">
                         <div className="flex justify-between text-xs font-semibold">
@@ -2259,16 +2259,16 @@ export default function App() {
           {/* ==================== 7. ตั้งค่าระบบ (Settings) ==================== */}
           {activeMenu === 'settings' && (
             <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs max-w-2xl">
-              <h2 className="text-lg font-bold text-[#0f3878] mb-2">ตั้งค่าระบบ (System Settings)</h2>
+              <h2 className="text-lg font-bold text-[#08652D] mb-2">ตั้งค่าระบบ (System Settings)</h2>
               <p className="text-xs text-slate-500 mb-4">กำหนดค่าเริ่มต้นของบริษัท สปีดี้แพคเก็จ เอ็กซ์เพรส จำกัด และการเชื่อมต่อฐานข้อมูล</p>
               <div className="space-y-3 text-sm">
                 <div className="flex items-center justify-between p-3.5 bg-slate-50 rounded-xl border">
                   <span className="font-medium">โหมดการแสดงผลวันที่</span>
-                  <span className="text-xs font-bold text-[#0e4d9c] bg-blue-100 px-3 py-1 rounded-full">พุทธศักราช (พ.ศ.)</span>
+                  <span className="text-xs font-bold text-[#008F18] bg-green-100 px-3 py-1 rounded-full">พุทธศักราช (พ.ศ.)</span>
                 </div>
                 <div className="flex items-center justify-between p-3.5 bg-slate-50 rounded-xl border">
                   <span className="font-medium">สถานะการเชื่อมต่อฐานข้อมูล</span>
-                  <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">พร้อมใช้งาน (Local State)</span>
+                  <span className="text-xs font-bold text-[#16A34A] bg-[#E8F5E9] px-3 py-1 rounded-full">พร้อมใช้งาน (Local State)</span>
                 </div>
               </div>
             </div>
